@@ -1,0 +1,42 @@
+.client {
+    display: flex;
+    justify-content: space-between;
+
+    &__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-basis: calc((100% - 150px) / 6);
+        border: 1px solid #afb1b8;
+        box-sizing: border-box;
+        border-radius: 4px;
+        padding: 16px 31px;
+        color: inherit;
+        transition: color var(--transition-function), border var(--transition-function);
+
+        &:focus,
+        &:hover {
+            color: var(--color-acsent);
+            border: 1px solid var(--color-acsent);
+        }
+    }
+
+    .client__icon {
+        fill: var(--icon-color);
+        transition: fill var(--transition-function);
+
+        .client__link:focus &,
+        .client__link:hover & {
+            fill: var(--color-acsent);
+        }
+
+        &-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 106px;
+            height: 60px;
+            border: none;
+        }
+    }
+}

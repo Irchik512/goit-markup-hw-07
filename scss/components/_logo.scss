@@ -1,0 +1,25 @@
+.logo {
+    font-family: Raleway;
+    font-size: 26px;
+    line-height: 1.19;
+    color: var(--color-acsent);
+    margin-right: 93px;
+    transition: color var(--transition-function);
+
+    .footer & {
+        margin-right: 0;
+    }
+
+    &:hover,
+    &:focus {
+        color: var(--color-acsent);
+    }
+}
+
+.logo__studio {
+    color: var(--h-title-color);
+
+    .footer & {
+        color: var(--main-fon);
+    }
+}

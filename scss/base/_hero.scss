@@ -1,0 +1,19 @@
+.hero-section {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: var(--main-fon);
+    background-color: var(--hero-fot-color);
+    background-image: linear-gradient(var(--gradient-color), var(--gradient-color)),
+        url(../imege/hero-fon-s.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.first-title {
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.37;
+    text-transform: uppercase;
+}
