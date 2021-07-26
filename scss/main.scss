@@ -4,10 +4,10 @@
 @import 'base/section';
 @import 'utils/visualy-hidden';
 @import 'utils/grid';
-@import 'base/header';
+@import 'layout/header';
 @import 'components/logo';
 @import 'components/contacts';
-@import 'base/nav';
+@import 'layout/nav';
 @import 'base/hero';
 @import 'components/button';
 @import 'base/advantages';
@@ -15,7 +15,7 @@
 @import 'base/team';
 @import 'components/social';
 @import 'base/client';
-@import 'base/footer';
+@import 'layout/footer';
 @import 'base/portfolio';
 @import 'components/backrop';
 @import 'components/modal';

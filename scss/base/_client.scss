@@ -21,7 +21,7 @@
         }
     }
 
-    .client__icon {
+    &__icon {
         fill: var(--icon-color);
         transition: fill var(--transition-function);
 
