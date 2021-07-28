@@ -18,6 +18,71 @@
   --transition-function: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -30px;
+  margin-left: -30px;
+}
+
+.grid__item {
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+.order-button, .folowus__btn {
+  min-width: 200px;
+  padding: 10px;
+  border: 0px;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  background: var(--color-acsent);
+  font-style: inherit;
+  font-weight: inherit;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  color: var(--main-fon);
+  transition: background-color var(--transition-function);
+  text-align: center;
+}
+
+.order-button {
+  margin-top: 30px;
+}
+
+.order-button:hover, .order-button:focus {
+  background-color: var(--color-acsent-hover);
+}
+
+.folowus__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+}
+
+.folowus__btn-icon {
+  margin-left: 10px;
+}
+
+.folowus__btn:focus, .folowus__btn:hover {
+  background: var(--color-acsent-hover);
+}
+
 h1,
 h2,
 h3,
@@ -63,64 +128,6 @@ body {
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
-}
-
-.section {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
-.section__title {
-  font-size: 36px;
-  line-height: 1.16;
-  text-align: center;
-  color: var(--title-color);
-  margin-bottom: 50px;
-}
-
-.advantages-section {
-  padding-bottom: 47px;
-}
-
-.tipeofwork-section {
-  padding-top: 47px;
-}
-
-.team-section {
-  background-color: var(--team-color);
-}
-
-.visually-hidden {
-  position: absolute !important;
-  clip: rect(1px 1px 1px 1px);
-  /* IE6, IE7 */
-  clip: rect(1px, 1px, 1px, 1px);
-  padding: 0 !important;
-  border: 0 !important;
-  height: 1px !important;
-  width: 1px !important;
-  overflow: hidden;
-}
-
-.grid {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: -30px;
-  margin-left: -30px;
-}
-
-.grid__item {
-  margin-top: 30px;
-  margin-left: 30px;
-}
-
-.header {
-  border-bottom: 1px solid #ececec;
-}
-
-.header-container {
-  display: flex;
-  align-items: center;
 }
 
 .logo {
@@ -214,6 +221,90 @@ body {
   color: var(--main-fon);
 }
 
+.social__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.social__link {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  border-radius: 50%;
+  color: inherit;
+  background-color: transparent;
+  justify-content: center;
+  align-items: center;
+  transition: color var(--transition-function), background-color var(--transition-function);
+}
+
+.footer .social__link {
+  color: var(--main-fon);
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: color var(--transition-function), background-color var(--transition-function);
+}
+
+.footer .social__link:hover, .footer .social__link:focus {
+  color: var(--main-fon);
+  background-color: var(--color-acsent);
+}
+
+.social__link:hover, .social__link:focus {
+  background-color: var(--color-acsent);
+}
+
+.social__icon {
+  fill: var(--icon-color);
+  transition: fill var(--transition-function);
+}
+
+.social__link:hover .social__icon,
+.social__link:focus .social__icon {
+  fill: var(--main-fon);
+}
+
+.footer .social__icon {
+  fill: var(--main-fon);
+}
+
+.footer .social__item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.section__title {
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  color: var(--title-color);
+  margin-bottom: 50px;
+}
+
+.advantages-section {
+  padding-bottom: 47px;
+}
+
+.tipeofwork-section {
+  padding-top: 47px;
+}
+
+.team-section {
+  background-color: var(--team-color);
+}
+
+.header {
+  border-bottom: 1px solid #ececec;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
 .navigation__list {
   display: flex;
   align-items: baseline;
@@ -278,47 +369,6 @@ body {
   font-size: 44px;
   line-height: 1.37;
   text-transform: uppercase;
-}
-
-.order-button, .folowus__btn {
-  min-width: 200px;
-  padding: 10px;
-  border: 0px;
-  border-radius: 4px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  background: var(--color-acsent);
-  font-style: inherit;
-  font-weight: inherit;
-  font-size: 16px;
-  line-height: 1.88;
-  letter-spacing: 0.06em;
-  cursor: pointer;
-  color: var(--main-fon);
-  transition: background-color var(--transition-function);
-  text-align: center;
-}
-
-.order-button {
-  margin-top: 30px;
-}
-
-.order-button:hover, .order-button:focus {
-  background-color: var(--color-acsent-hover);
-}
-
-.folowus__btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-self: center;
-}
-
-.folowus__btn-icon {
-  margin-left: 10px;
-}
-
-.folowus__btn:focus, .folowus__btn:hover {
-  background: var(--color-acsent-hover);
 }
 
 .advantages__item {
@@ -401,56 +451,6 @@ body {
   font-size: 16px;
   line-height: 1.88;
   margin-bottom: 16px;
-}
-
-.social__list {
-  display: flex;
-  justify-content: space-between;
-}
-
-.social__link {
-  width: 44px;
-  height: 44px;
-  display: flex;
-  border-radius: 50%;
-  color: inherit;
-  background-color: transparent;
-  justify-content: center;
-  align-items: center;
-  transition: color var(--transition-function), background-color var(--transition-function);
-}
-
-.footer .social__link {
-  color: var(--main-fon);
-  background-color: rgba(255, 255, 255, 0.1);
-  transition: color var(--transition-function), background-color var(--transition-function);
-}
-
-.footer .social__link:hover, .footer .social__link:focus {
-  color: var(--main-fon);
-  background-color: var(--color-acsent);
-}
-
-.social__link:hover, .social__link:focus {
-  background-color: var(--color-acsent);
-}
-
-.social__icon {
-  fill: var(--icon-color);
-  transition: fill var(--transition-function);
-}
-
-.social__link:hover .social__icon,
-.social__link:focus .social__icon {
-  fill: var(--main-fon);
-}
-
-.footer .social__icon {
-  fill: var(--main-fon);
-}
-
-.footer .social__item:not(:last-child) {
-  margin-right: 10px;
 }
 
 .client {
